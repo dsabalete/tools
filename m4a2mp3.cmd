@@ -10,7 +10,7 @@ GOTO :eof
  CALL SET _newnm=%%_firstbit:%_qt%=%%
  SET _commanm=%_newnm:,=_COMMA_%
  REM echo %_commanm%
- CALL %VLC_HOME%"C:\Archivos de programa\VideoLAN\VLC\vlc" -I dummy -vvv %1 --sout=#transcode{acodec="mpga",ab="192","channels=2"}:standard{access="file",mux="raw",dst="%_commanm%.mp3"} vlc://quit
+ CALL %VLC_HOME% -I dummy -vvv %1 --sout=#transcode{acodec="mpga",ab="192","channels=2"}:standard{access="file",mux="raw",dst="%_commanm%.mp3"} vlc://quit
 GOTO :eof
 
 :SUB_RENAME
